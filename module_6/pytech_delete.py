@@ -5,9 +5,10 @@ collection = db.students
 cursor = collection.find()
 for record in cursor:
 	print(record)
-result = collection.update_one({"student_id": 1007},
+result = collection.delete_one({"student_id":1007},
 {
-	"$set":{
+	"$set":
+	{
 	"last_name":"Jones"
 }
 }
